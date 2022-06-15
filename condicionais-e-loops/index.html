@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais e loops</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="placar">
+    <div>{{ n }}</div>
+    <span v-if="n > 5">Parabéns, você passou de 5 pontos</span>
+</div>
+
+<div id="lista">
+    <ul>
+        <li v-for="info in nomes">{{ info.nome }},
+        <span>Sr. {{info.sobrenome}}</span>
+        <span v-text="info.idade"> </span>
+        </li>
+    </ul>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

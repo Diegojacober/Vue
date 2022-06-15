@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Flow</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+    <!-- ----------forma 1------------ -->
+    <!-- <div v-if="pais == 'argentina'">
+        <p v-html="argentina"></p>
+        <p>América do Sul</p>
+    </div>
+    <div v-if="pais == 'brazil'">
+        <p v-html="brazil"></p>
+        <p>América do Sul</p>
+    </div>
+    <div v-if="pais == 'china'">
+        <p v-html="china"></p>
+        <p>Ásia</p>
+    </div> -->
+
+    <!-- ----------forma 2----------- -->
+    <!-- <div>
+        <p v-html="(
+            pais == 'argentina' ? argentina :
+            pais == 'brazil' ? brazil :
+            pais == 'china' ? china :
+            pais == 'usa' ? usa :
+            pais == 'uk' ? uk : ''
+        )"></p>
+        <p v-html="(
+            pais == 'argentina' ? 'América do Sul' :
+            pais == 'brazil' ? 'América do Sul' :
+            pais == 'china' ? 'Ásia' :
+            pais == 'usa' ? 'América do Norte' :
+            pais == 'uk' ? 'Europa' : ''
+        )"></p>
+    </div> -->
+
+    <!-- Listagem de todos os países forma 1  -->
+    <!-- <div>
+        <p v-html="argentina"></p>
+        <p>América do Sul</p>
+    </div>
+    <div>
+        <p v-html="brazil"></p>
+        <p>América do Sul</p>
+    </div> -->
+
+    <!-- forma 2  -->
+    <div v-for="pais in paises()">
+        <p v-html="pais.bandeira"></p>
+        <p v-text="pais.continente"></p>
+    </div>
+</div>
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
